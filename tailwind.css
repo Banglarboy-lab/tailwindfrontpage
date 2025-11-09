@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+.wrapper {
+  @apply w-[97%] max-w-[1600px] mx-auto;
+}
+/* .rating {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+.rating input {
+  display: none;
+}
+.rating label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.rating input:checked ~ label {
+  color: rgb(250 204 21);
+}
+.rating label:hover,
+.rating label:hover ~ label {
+   color: rgb(250 204 21);
+  transform: scale(1.2);
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.8);
+} */
+/* Vanilla CSS for hover previous stars (required) */
+
+.rating label:hover,
+.rating label:hover ~ label {
+  color: rgb(250 204 21);
+  transform: scale(1.2);
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.8);
+}
+.rating {
+  @apply inline-flex [direction:rtl] [unicode-bidi:bidi-override] [&_input]:hidden
+         [&_label]:text-4xl [&_label]:text-gray-300 [&_label]:cursor-pointer 
+         [&_label]:transition [&_input:checked~label]:text-yellow-400 
+         [&_input:checked~label]:[text-shadow:0_0_8px_rgba(250,204,21,0.8)];
+}
+
+.rating label {
+  @apply transition; /* extra smooth */
+}
+
+@layer utilities {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 14s linear infinite;
+  }
+}
