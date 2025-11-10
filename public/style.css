@@ -1182,6 +1182,12 @@
       width: 100%;
     }
   }
+  .lg\:translate-y-8 {
+    @media (width >= 64rem) {
+      --tw-translate-y: calc(var(--spacing) * 8);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
   .lg\:grid-cols-3 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1220,6 +1226,24 @@
   .lg\:text-\[50px\] {
     @media (width >= 64rem) {
       font-size: 50px;
+    }
+  }
+  .lg\:opacity-0 {
+    @media (width >= 64rem) {
+      opacity: 0%;
+    }
+  }
+  .lg\:transition-all {
+    @media (width >= 64rem) {
+      transition-property: all;
+      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+      transition-duration: var(--tw-duration, var(--default-transition-duration));
+    }
+  }
+  .lg\:duration-500 {
+    @media (width >= 64rem) {
+      --tw-duration: 500ms;
+      transition-duration: 500ms;
     }
   }
   .xl\:w-1\/6 {
