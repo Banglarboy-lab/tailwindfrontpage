@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .wrapper {
-  @apply w-[97%] max-w-[1600px] mx-auto;
+  @apply w-[96%] max-w-[1600px] mx-auto;
 }
 /* .rating {
   direction: rtl;
